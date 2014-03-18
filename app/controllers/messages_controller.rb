@@ -28,6 +28,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        user_id = current_user.id
+        message_id = @message.id
+
+        Resque.enqueue(EmailWorker, user_id, message_id)
+
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render action: 'show', status: :created, location: @message }
       else

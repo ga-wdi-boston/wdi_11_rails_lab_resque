@@ -11,3 +11,7 @@
 11) rake db:migrate
 12) add procfile
 13) run in three tabs foreman start, redis-server, redis-cli monitor
+14) set up pony by bundle, add config block to config/application.rb
+15) added a worker folder in app, with a worker.rb file
+16) add a resque.rb file under initializers
+16) queue up worker under the create message method
