@@ -14,7 +14,9 @@ class PostsController < ApplicationController
 
   def create
   	@post = Post.create!(post_params)
-  	redirect_to root_path
+  	email = post_params[:email]
+  	Resque.enqueue(EmailWorker, email)
+  	redirect_to :posts, notice: "Email Sent"
   end
 
   def destroy
