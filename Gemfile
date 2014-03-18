@@ -43,3 +43,29 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'devise'
+
+gem 'chronic'
+
+gem 'time_difference' # Get time difference between two dates
+
+gem 'sendgrid' # this is the gem that lets you send email
+
+gem 'pony'
+
+group :production do
+  gem 'rails_12factor'
+end
+
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'debugger'
+  gem 'quiet_assets'
+end
+
+gem 'redis'
+gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
+gem 'foreman', require: false
