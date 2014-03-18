@@ -1,0 +1,19 @@
+<h1>Guestbook entries <%= link_to 'New Entry', new_entry_path, class: 'btn btn-info' %></h1>
+
+<div class="entries col-sm-6">
+  <% @entries.each do |entry| %>
+    <div class="entry">
+      <h2><%= entry.name %></h2>
+      <p class="lead text-muted"><%= entry.body %></p>
+      <small><%= link_to 'Show', entry %></small>
+      <% if (user_signed_in?) && (entry.user == current_user) %>
+        | <%= link_to 'Edit', edit_entry_path(entry) %> |
+        <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<br>
+
+
