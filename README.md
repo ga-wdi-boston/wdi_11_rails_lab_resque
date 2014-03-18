@@ -4,11 +4,9 @@ Fork and clone this repo. It will be turned in and graded as a homework, but ide
 
 Create a "Guestbook" application that will allow users to input their name/email address and a brief note that will be displayed on an index page. When the user submits the post, they should be sent an email thanking them for their post.
 
-Find a Redis provider on Heroku and deploy this project to Heroku.
-
 ### Points for assessment
 
-* 1 - Working deployment to Heroku with passwords/credentials out of version control
+* 1 - Keep passwords/credentials out of version control and use Sendgrid on Heroku
 * 1 - Email can be sent to a user thanking them for signing the guestbook.
 * 1 - This email is sent using a background task with Resque
 * 1 - Your model, views and controller code is appropriate done
