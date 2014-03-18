@@ -29,6 +29,7 @@ class GuestbooksController < ApplicationController
       if @guestbook.save
         format.html { redirect_to @guestbook, notice: 'Guestbook was successfully created.' }
         format.json { render action: 'show', status: :created, location: @guestbook }
+        Resque.enqueue(EmailWorker, current_user.id)
       else
         format.html { render action: 'new' }
         format.json { render json: @guestbook.errors, status: :unprocessable_entity }
