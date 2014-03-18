@@ -9,6 +9,9 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'haml'
 
+# Devise
+gem 'devise'
+
 # Email
 gem 'pony'
 gem 'sendgrid'
