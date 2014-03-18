@@ -1,2 +1,2 @@
 $("#note_note").val('')
-$("#notes").append("<tr><td><%= j(@note.note) %></td></tr>")
+$("#notes").append("<tr><td><%= j(@note.note) %></td><td><%= j(time_ago_in_words(@note.created_at)) %> ago</td></tr>")

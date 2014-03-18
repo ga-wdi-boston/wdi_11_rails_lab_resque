@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <th>Note</th>
+      <th>Posted on</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,6 +18,7 @@
     <% @notes.each do |note| %>
       <tr>
         <td><%= note.note %></td>
+        <td><%= time_ago_in_words(note.created_at) %> ago</td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
         <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>

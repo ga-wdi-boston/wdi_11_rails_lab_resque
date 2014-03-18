@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+ @import 'bootstrap';
+
+td:first-child {
+ 	width: 300px;
+ }
+
+
+th, td {
+	padding: 10px;
+}
