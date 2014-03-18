@@ -1,8 +1,5 @@
 ResqueLab::Application.routes.draw do
-  get "posts/index"
-  get "posts/show"
-  get "posts/new"
-  get "posts/create"
+	resources :posts
 
   root to: 'posts#index'
 end
