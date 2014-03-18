@@ -46,6 +46,8 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     dotenv (0.10.0)
+    dotenv-rails (0.10.0)
+      dotenv (= 0.10.0)
     erubis (2.7.0)
     execjs (2.0.2)
     foreman (0.63.0)
@@ -69,6 +71,8 @@ GEM
     multi_json (1.9.0)
     pg (0.17.1)
     polyglot (0.3.4)
+    pony (1.8)
+      mail (>= 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -128,10 +132,12 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   foreman
   jbuilder (~> 1.2)
   jquery-rails
   pg
+  pony
   rails (= 4.0.3)
   redis
   resque (~> 2.0.0.pre.1)!
