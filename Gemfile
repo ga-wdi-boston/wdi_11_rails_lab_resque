@@ -16,6 +16,7 @@ gem 'coffee-rails'
 gem 'sendgrid'
 gem 'redis'
 gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
+gem 'pony'
 
 
 group :production do
