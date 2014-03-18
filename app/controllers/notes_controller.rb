@@ -5,6 +5,12 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all
+    @note = Note.new
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @notes}
+    end
   end
 
   # GET /notes/1
