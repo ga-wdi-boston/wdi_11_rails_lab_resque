@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        Resque.enqueue(EmailWorker, @post.email, @post.note) #Need to pass these in as params first
+        Resque.enqueue(EmailWorker, @post.email, @post.note)
         format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
       else
         format.html { render action: 'new' }
