@@ -46,6 +46,8 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     dotenv (0.10.0)
+    dotenv-rails (0.10.0)
+      dotenv (= 0.10.0)
     erubis (2.7.0)
     execjs (2.0.2)
     foreman (0.63.0)
@@ -132,6 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   foreman
   jbuilder (~> 1.2)
   jquery-rails
