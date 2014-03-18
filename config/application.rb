@@ -14,7 +14,7 @@ Bundler.require(:default, Rails.env)
 module ResqueLab
   class Application < Rails::Application
 
-        Pony.options = {
+    Pony.options = {
     :via => :smtp,
     :via_options => {
     :address => 'smtp.sendgrid.net',

@@ -69,3 +69,5 @@ end
 gem 'redis'
 gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
 gem 'foreman', require: false
+
+gem 'dotenv-rails', :groups => [:development, :test]
