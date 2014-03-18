@@ -12,8 +12,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        Resque.enqueue(EmailWorker, @post.email, @post.name, @post.note) #Need to pass these in as params first
-        format.html { redirect_to greetings_path, notice: 'Post was successfully created.' }
+        Resque.enqueue(EmailWorker, @post.email, @post.note) #Need to pass these in as params first
+        format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
       else
         format.html { render action: 'new' }
         format.json { render json: @post.errors, status: :unprocessable_entity }
