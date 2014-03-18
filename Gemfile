@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'coffee-rails'
 gem 'sendgrid' # this is the gem that lets you send email
 gem 'pony'
+gem 'devise'
 
 gem 'redis'
 gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
