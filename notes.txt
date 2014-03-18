@@ -1,0 +1,13 @@
+1) updated gem file
+2) bundle
+3) add .env to the .gitignore
+4) install devise with cmd line ( rails generate devise:install )
+5) change the app layout view to add links and flash
+6) be sure there is a root route
+7) rails generate devise User
+8) rake db:create db:migrate
+9) generate a guestbook message model with scaffolds
+10) rails g scaffold message content:text subject:text
+11) rake db:migrate
+12) add procfile
+13) run in three tabs foreman start, redis-server, redis-cli monitor
