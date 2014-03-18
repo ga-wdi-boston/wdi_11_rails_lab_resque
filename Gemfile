@@ -5,6 +5,7 @@ gem 'rails', '4.0.3'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'pry-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -26,6 +27,15 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'devise'
+
+gem 'dotenv-rails'
+gem 'pony'
+gem 'sendgrid' # this is the gem that lets you send email
+gem 'foreman', require: false
+gem 'redis'
+gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
