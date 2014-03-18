@@ -50,6 +50,7 @@ end
 gem 'pry-rails'
 gem 'dotenv-rails'
 gem 'pony'
+gem 'sendgrid'
 
 # Needed for Resque
 
