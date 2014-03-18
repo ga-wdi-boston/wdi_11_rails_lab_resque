@@ -27,6 +27,12 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'sendgrid' # this is the gem that lets you send email
+gem 'pony'     # This makes sending email easier
+gem 'foreman', require: false
+gem 'redis'
+gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
