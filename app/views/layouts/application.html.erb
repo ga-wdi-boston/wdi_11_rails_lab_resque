@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ResqueLab</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>ResqueLab</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
+		<% if user_signed_in? %>
+		  <p>Signed in as <%= current_user.email %>
+		  <%= link_to('Sign out', destroy_user_session_path, :method => :delete) %></p>
+		<% else %>
+		  <p><%= link_to('Sign in', new_user_session_path) %></p>
+		<% end %>
 
-</body>
+	<%= yield %>
+
+	</body>
 </html>
