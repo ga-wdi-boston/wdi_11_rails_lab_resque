@@ -1,0 +1,39 @@
+1) updated gem file
+2) bundle
+3) add .env to the .gitignore
+4) install devise with cmd line ( rails generate devise:install )
+5) change the app layout view to add links and flash
+6) be sure there is a root route
+7) rails generate devise User
+8) rake db:create db:migrate
+9) generate a guestbook message model with scaffolds
+10) rails g scaffold message content:text subject:text
+11) rake db:migrate
+12) add procfile
+13) run in three tabs foreman start, redis-server, redis-cli monitor
+14) set up pony by bundle, add config block to config/application.rb
+15) added a worker folder in app, with a worker.rb file
+16) add a resque.rb file under initializers
+16) queue up worker under the create message method
+
+
+with authenthication
+17) dropped table
+17) make changes to migration and initailizer devise.rb to make it all confirmable
+18) add
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    ActionMailer::Base.smtp_settings = {
+      :address        => "smtp.sendgrid.net",
+      :port          => "25",
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password      => ENV['SENDGRID_PASSWORD'],
+      :domain        => 'heroku.com'
+    }
+  to the development.rb
+
+
+18) rake db:drop db:create db:migrate
+19) now the automatic devise + sendgrid is all set to work - you are now confirable
+
