@@ -13,6 +13,20 @@ Bundler.require(:default, Rails.env)
 
 module ResqueLab
   class Application < Rails::Application
+
+    Pony.options = {
+          :via => :smtp,
+          :via_options => {
+            :address => 'smtp.sendgrid.net',
+            :port => '587',
+            :domain => 'heroku.com',
+            :user_name => ENV['SENDGRID_USERNAME'],
+            :password => ENV['SENDGRID_PASSWORD'],
+            :authentication => :plain,
+            :enable_starttls_auto => true
+          }
+        }
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
