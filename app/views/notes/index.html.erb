@@ -1,22 +1,18 @@
-<h1>Listing notes</h1>
+<h1>Say Haaaaaaaaaaaaayyyyyyy</h1>
+
+<h3>No, really, say haaayyy.</h3>
+<%= render partial: 'form' %>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Comment</th>
     </tr>
   </thead>
 
   <tbody>
     <% @notes.each do |note| %>
       <tr>
-        <td><%= note.name %></td>
-        <td><%= note.email %></td>
         <td><%= note.content %></td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
@@ -25,7 +21,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Note', new_note_path %>
